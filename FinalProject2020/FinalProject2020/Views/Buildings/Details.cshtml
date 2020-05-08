@@ -1,0 +1,125 @@
+﻿@model FinalProject2020.Models.Building
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    @*<hr />
+    <h4>Building with Appartments information in it </h4>
+    <hr />*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalOfFloor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalOfFloor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfAppartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfAppartment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildYear)
+        </dd>
+
+    </dl>
+
+    <table class="table">
+        <tr>
+            <th>
+                Appartment Id
+            </th>
+            <th>
+                Number of Room
+            </th>
+            <th>
+                Number of Bath
+            </th>
+            <th>
+                Number of Parking
+            </th>
+            <th>
+                FloorNum
+            </th>
+            <th>
+                PricePerMonth
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                RentStatus
+            </th>
+        </tr>
+        @foreach (var item in Model.Appartments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppartmentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfRoom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfBath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfParking)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FloorNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PricePerMonth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RentStatus)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.BuildingId }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

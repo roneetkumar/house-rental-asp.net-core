@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FinalProject2020.Models.Building>
+
+@{
+    ViewBag.Title = "Building List";
+}
+
+<h2>Building List</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalOfFloor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOfAppartment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildYear)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalOfFloor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOfAppartment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildYear)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.BuildingId }) |*@
+            @Html.ActionLink("Details", "Details", new { id = item.BuildingId })
+            @*| @Html.ActionLink("Delete", "Delete", new { id = item.BuildingId })*@
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.BuildingId }) |*@
+    @Html.ActionLink("Back to List", "About","Home")
+</p>

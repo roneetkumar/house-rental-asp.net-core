@@ -1,0 +1,86 @@
+﻿@model IEnumerable<FinalProject2020.Models.Appartment>
+
+@{
+    ViewBag.Title = "Appartments List";
+}
+
+<h2>Appartments List</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AppartmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfBath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfParking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Building.BuildingId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppartmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfRoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfBath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfParking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloorNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Building.BuildingId)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.AppartmentId }) |*@
+            @Html.ActionLink("Details", "Details", new { id = item.AppartmentId }) 
+            @*|@Html.ActionLink("Delete", "Delete", new { id = item.AppartmentId })*@
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.BuildingId }) |*@
+    @Html.ActionLink("Back to List", "About","Home")
+</p>

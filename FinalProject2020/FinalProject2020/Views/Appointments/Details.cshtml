@@ -1,0 +1,91 @@
+﻿@model FinalProject2020.Models.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Schedule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Schedule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendingPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttendingPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.TenantId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.TenantId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.AppointmentId }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

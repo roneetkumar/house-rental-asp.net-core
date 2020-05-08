@@ -1,0 +1,91 @@
+﻿@model FinalProject2020.Models.Appartment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <h4>Appartment information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppartmentId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfRoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfBath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfBath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfParking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfParking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.AppartmentId }) |*@
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>

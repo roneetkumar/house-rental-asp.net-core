@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a6e1f89993c4e22a614c6d17ea6db53" Name="Diagram1">
+        <EntityTypeShape EntityType="PropertyRentalDBModel.Appartment" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PropertyRentalDBModel.Appointment" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PropertyRentalDBModel.Building" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PropertyRentalDBModel.Message" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PropertyRentalDBModel.sysdiagram" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PropertyRentalDBModel.Tenant" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="PropertyRentalDBModel.FK_Appartments_Buildings" ManuallyRouted="false" />
+        <AssociationConnector Association="PropertyRentalDBModel.FK_Appointments_Tenants" ManuallyRouted="false" />
+        <AssociationConnector Association="PropertyRentalDBModel.FK_Messages_Tenants" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
